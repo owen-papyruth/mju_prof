@@ -1,13 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: MyString
+  integer: MyString
   name: MyString
+  string: MyString
   department: MyString
+  string: MyString
   image_url: MyString
+  string: MyString
   class: MyString
+  string: MyString
+  like_num: MyString
+  integer: MyString
 
 two:
+  id: MyString
+  integer: MyString
   name: MyString
+  string: MyString
   department: MyString
+  string: MyString
   image_url: MyString
+  string: MyString
   class: MyString
+  string: MyString
+  like_num: MyString
+  integer: MyString
