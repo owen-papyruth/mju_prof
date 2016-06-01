@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523131134) do
+ActiveRecord::Schema.define(version: 20160601140427) do
 
   create_table "profs", force: :cascade do |t|
     t.string   "name"
-    t.string   "department"
-    t.string   "image_url"
-    t.string   "class"
+    t.text     "imgUrl"
+    t.integer  "like"
+    t.string   "dept"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

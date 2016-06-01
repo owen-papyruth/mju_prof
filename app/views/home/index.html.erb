@@ -1,80 +1,37 @@
 <section class="breadcrumb_bg">
-      <h2>About Layout 1</h2>
-      <ol class="breadcrumb">
-         <li><a href="index.html">Home</a></li>
-         <li><a href="#">Pages</a></li>
-         <li class="active">About Layout 1</li>
-      </ol>
+   <h2>명지대학교 교수평가</h2>
+   <ol class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Pages</a></li>
+      <li class="active">About Layout 1</li>
+   </ol>
 </section>
 
 <section class="team big_block">
-      <div class="container">
-         <h2 class="text-center">Family like a <strong>팀</strong></h2>
-         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12 block">
-               <div>
-                  <div class="team-social">
-                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                     </ul>
-                  </div>
-                  <%= image_tag 'team_1.jpg', class:'img-responsive' %></div>
-               <div class="details">
-                  <h3>James Andreson</h3>
-                  <h4>Team Lead</h4>
+   <div class="container">
+      <h2 class="text-center">명지대학교 <strong>교수평가</strong></h2>
+      <div class="row">
+         <% @prof_list.each do |prof| %>
+         <div class="col-md-3 col-sm-6 col-xs-12 block">
+            <div>
+               <div class="team-social">
+                  <ul>
+                     <li><a href="home/<%=prof.id%>/like"><i class="fa fa-facebook">좋아요</i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  </ul>
                </div>
+               <img src = <%= prof.imgUrl %> class:'img-responsive' class="size">
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 block">
-               <div>
-                  <div class="team-social">
-                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                     </ul>
-                  </div>
-                  <%= image_tag 'team_2.jpg', class:'img-responsive' %></div>
-               <div class="details">
-                  <h3>Lisa Rachel</h3>
-                  <h4>Web Developer</h4>
-               </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 block ">
-               <div>
-                  <div class="team-social">
-                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                     </ul>
-                  </div>
-                  <%= image_tag 'team_3.jpg', class:'img-responsive' %> </div>
-               <div class="details">
-                  <h3>Michael Jhonson</h3>
-                  <h4>UI Designer</h4>
-               </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 block">
-               <div>
-                  <div class="team-social">
-                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                     </ul>
-                  </div>
-                  <%= image_tag 'team_4.jpg', class:'img-responsive' %> </div>
-               <div class="details">
-                  <h3>witherspoon</h3>
-                  <h4>UI Developer</h4>
-               </div>
+            
+            <div class="details">
+               <h3>이 름 : <%= prof.name %></h3>
+               <h4>학 과 : <%= prof.dept %></h4>
+               <h4>좋아요 : <%= prof.like %></h4>
             </div>
          </div>
+         <%end%>
       </div>
-   </section>
+   </div>
+</section>
