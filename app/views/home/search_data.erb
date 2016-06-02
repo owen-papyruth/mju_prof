@@ -18,8 +18,11 @@
    <div class="container">
       <h2 class="text-center">명지대학교 <strong>교수평가</strong></h2>
       <div class="row">
-         <% @prof_list.each do |prof| %>
-         <div class="col-md-3 col-sm-6 col-xs-12 block">
+        <% if @prof_list.size == 0%>
+        <h2>검색정보가 없습니다.</h2>
+        <% else %>
+        <% @prof_list.each do |prof| %>
+        <div class="col-md-3 col-sm-6 col-xs-12 block">
             <div>
                <div class="team-social">
                   <ul>
@@ -40,6 +43,7 @@
                <h4>좋아요 : <%= prof.like %></h4>
             </div>
          </div>
+         <%end%>
          <%end%>
       </div>
    </div>

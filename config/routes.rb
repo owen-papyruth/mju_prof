@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
   
   get 'home/:prof_id/like' => 'home#like'
+  get 'search' => 'home#search_data'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
