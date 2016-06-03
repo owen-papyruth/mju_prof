@@ -1,5 +1,5 @@
 <section class="breadcrumb_bg">
-   <a href="/"><h2>명지대학교 교수평가</h2></a>
+   <a href="/"><h2>명지대학교 교수님 인기투표</h2></a>
    <!--<ol class="breadcrumb">
       <li><a href="index.html">Home</a></li>
       <li><a href="#">Pages</a></li>
@@ -16,7 +16,7 @@
 
 <section class="team big_block">
    <div class="container">
-      <h2 class="text-center">명지대학교 <strong>교수평가</strong></h2>
+      <h2 class="text-center">명지대학교에서 가장 인기있는 교수님은 누굴까요? 원하는 교수님의 좋아요를 <strong>클릭, 클릭!</strong> </h2>
       <div class="row">
          <% @prof_list.each do |prof| %>
          <div class="col-md-3 col-sm-6 col-xs-12 block">
@@ -33,11 +33,11 @@
                </div>
                <img src = <%= prof.imgUrl %> class:'img-responsive' class="size">
             </div>
-            
+
             <div class="details">
-               <h3>이 름 : <%= prof.name %></h3>
-               <h4>학 과 : <%= prof.dept %></h4>
-               <h4>좋아요 : <%= prof.like %></h4>
+               <h3><%= prof.name %> 교수님</h3>
+               <h4><%= prof.dept %> 학과</h4>
+               <h4><%= prof.like %>개의 좋아요</h4>
             </div>
          </div>
          <%end%>
