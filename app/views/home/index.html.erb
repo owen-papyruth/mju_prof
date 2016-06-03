@@ -16,7 +16,7 @@
 
 <section class="team big_block">
    <div class="container">
-      <h2 class="text-center">명지대학교에서 가장 인기있는 교수님은 누굴까요? 원하는 교수님의 좋아요를 <strong>클릭, 클릭!</strong> </h2>
+      <h2 class="text-center">명지대학교에서 가장 인기있는 교수님은 누굴까요? <br>원하는 교수님의 좋아요를 <strong>클릭, 클릭!</strong> </h2>
       <div class="row">
          <% @prof_list.each do |prof| %>
          <div class="col-md-3 col-sm-6 col-xs-12 block">
@@ -24,10 +24,12 @@
                <div class="team-social">
                   <ul>
                      <li>
-                        <a href="home/<%=prof.id%>/like">
-                           <%= image_tag 'like.png' %>좋아요</a></li>
-                     <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <!-- <a href="home/<%=prof.id%>/like"> -->
+                           <!-- <%= image_tag 'like.png' %>좋아요</a></li> -->
+
+
+                     <li><a href="#"><i class="fa-thumbs-o-up"></i></a></li>
+                     <!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
                   </ul>
                </div>
