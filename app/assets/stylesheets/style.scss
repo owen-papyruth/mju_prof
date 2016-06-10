@@ -1058,7 +1058,7 @@ Team
 	overflow: hidden;
 }
 .team .block img {
-	border: 1px solid #222;
+	// border: 1px solid #222;
 }
 .team .block div .team-social {
 	position: absolute;
@@ -1081,13 +1081,14 @@ Team
 	bottom: 0;
 }
 .team-social ul {
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .team-social ul li {
 	display: inline-block;
 	height: 30px;
 	font-size: 20px;
-	padding: 0 5px;
+	// padding: 0 5px;
 }
 .team-social ul li:nth-child {
 	padding-top: 30px;
