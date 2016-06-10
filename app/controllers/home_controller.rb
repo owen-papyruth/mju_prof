@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @prof_list = Prof.order(like: :desc).all
+    # @prof_list = Prof.order(like: :desc).all
   end
 
   def like
